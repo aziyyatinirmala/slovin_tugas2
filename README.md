@@ -1,5 +1,137 @@
 # slovin_tugas2
+# Survei Kepuasan Mahasiswa Statistika terhadap Fasilitas WiFi dan Internet di FMIPA Universitas Mataram
 
+## Deskripsi Project
+
+Project ini merupakan pengolahan data hasil survei kepuasan mahasiswa Program Studi Statistika terhadap fasilitas WiFi dan internet di FMIPA Universitas Mataram menggunakan bahasa pemrograman R.
+
+Penelitian ini bertujuan untuk mengetahui tingkat kepuasan mahasiswa terhadap kualitas jaringan internet kampus berdasarkan beberapa indikator pelayanan WiFi, kemudian dianalisis menggunakan metode statistik deskriptif, uji instrumen, naive estimation, weighted estimation, distribusi frekuensi, serta perhitungan ukuran sampel menggunakan rumus Slovin.
+
+Analisis dilakukan menggunakan software RStudio dengan beberapa package pendukung visualisasi dan pengolahan data statistik.
+
+---
+
+# Latar Belakang
+
+Internet dan WiFi kampus merupakan fasilitas penting dalam menunjang proses pembelajaran mahasiswa, terutama dalam:
+- mengakses e-learning,
+- mencari referensi akademik,
+- mengerjakan tugas,
+- melakukan praktikum,
+- dan aktivitas perkuliahan lainnya.
+
+Kualitas internet yang baik dapat meningkatkan efektivitas pembelajaran mahasiswa. Sebaliknya, jaringan internet yang lambat atau tidak stabil dapat menghambat aktivitas akademik.
+
+Berdasarkan kondisi tersebut, dilakukan survei kepuasan mahasiswa Statistika terhadap fasilitas WiFi dan internet di FMIPA Universitas Mataram.
+
+---
+
+# Tujuan Analisis
+
+Penelitian ini bertujuan untuk:
+1. Mengetahui tingkat kepuasan mahasiswa terhadap fasilitas WiFi FMIPA.
+2. Mengetahui indikator yang memiliki penilaian tertinggi dan terendah.
+3. Menguji validitas dan reliabilitas instrumen kuesioner.
+4. Membandingkan hasil naive estimation dan weighted estimation.
+5. Mengetahui distribusi tingkat kepuasan mahasiswa.
+6. Menghitung ukuran sampel menggunakan rumus Slovin.
+
+---
+
+# Dataset
+
+Dataset berasal dari hasil penyebaran kuesioner kepada mahasiswa Program Studi Statistika FMIPA Universitas Mataram.
+
+Karakteristik data:
+- Jenis data: Data primer
+- Skala pengukuran: Skala Likert 1–5
+- Jumlah populasi: 52 mahasiswa
+- Jumlah sampel: 31 mahasiswa
+
+Keterangan skala Likert:
+| Skor | Keterangan |
+|---|---|
+| 1 | Sangat Tidak Setuju |
+| 2 | Tidak Setuju |
+| 3 | Netral |
+| 4 | Setuju |
+| 5 | Sangat Setuju |
+
+---
+
+# Indikator Penelitian
+
+Penelitian menggunakan 9 indikator penilaian, yaitu:
+
+| No | Indikator |
+|---|---|
+| 1 | Akses WiFi mudah digunakan |
+| 2 | Kecepatan internet baik |
+| 3 | Koneksi internet stabil |
+| 4 | Internet membantu kegiatan kuliah |
+| 5 | Internet dapat digunakan saat jam kuliah |
+| 6 | Gangguan internet jarang terjadi |
+| 7 | Kualitas internet baik |
+| 8 | Internet dapat digunakan di luar jam kuliah |
+| 9 | Internet sesuai kebutuhan mahasiswa |
+
+---
+
+```markdown
+# Uji Validitas dan Reliabilitas
+
+## Uji Validitas
+
+Uji validitas dilakukan untuk mengetahui apakah setiap item pertanyaan pada kuesioner mampu mengukur variabel kepuasan mahasiswa terhadap fasilitas WiFi dan internet di FMIPA Universitas Mataram. Pengujian dilakukan menggunakan nilai `r.drop` dari hasil analisis `Cronbach Alpha` pada software R.
+
+Kriteria pengambilan keputusan:
+
+- Jika nilai `r.drop > 0,30` maka item dinyatakan **valid**
+- Jika nilai `r.drop ≤ 0,30` maka item dinyatakan **tidak valid**
+
+## Tabel Hasil Uji Validitas
+
+| No | Item Pernyataan | r.drop | Keputusan |
+|---|---|---|---|
+| 1 | Jaringan Wifi di FMIPA mudah diakses oleh mahasiswa | 0.7670 | Valid |
+| 2 | Kecepatan internet Wifi FMIPA cukup mendukung kegiatan | 0.8544 | Valid |
+| 3 | Koneksi Wifi di ruang kelas berjalan dengan stabil | 0.8030 | Valid |
+| 4 | Wifi FMIPA membantu mahasiswa dalam mencari materi kuliah | 0.8843 | Valid |
+| 5 | Akses internet di lingkungan FMIPA dapat digunakan pada jam perkuliahan dengan baik | 0.8551 | Valid |
+| 6 | Gangguan jaringan internet di FMIPA jarang terjadi | 0.3669 | Valid |
+| 7 | Kualitas internet di FMIPA sangat baik | 0.8354 | Valid |
+| 8 | Akses internet di lingkungan FMIPA dapat digunakan di luar jam perkuliahan dengan baik | 0.7062 | Valid |
+| 9 | Fasilitas Wifi dan internet di FMIPA sudah sesuai dengan kebutuhan mahasiswa | 0.8341 | Valid |
+
+## Interpretasi Uji Validitas
+
+Hasil pengujian menunjukkan bahwa seluruh item pertanyaan memiliki nilai `r.drop` lebih besar dari 0,30. Nilai tertinggi terdapat pada item *“Wifi FMIPA membantu mahasiswa dalam mencari materi kuliah”* sebesar 0,8843. Nilai terendah terdapat pada item *“Gangguan jaringan internet di FMIPA jarang terjadi”* sebesar 0,3669.
+
+Seluruh item dinyatakan valid sehingga seluruh pertanyaan layak digunakan dalam penelitian mengenai survei kepuasan mahasiswa Statistika terhadap fasilitas WiFi dan internet di FMIPA Universitas Mataram.
+
+---
+
+# Uji Reliabilitas
+
+Uji reliabilitas dilakukan untuk mengetahui tingkat konsistensi instrumen penelitian. Pengujian menggunakan metode `Cronbach Alpha` pada software R.
+
+Kriteria pengambilan keputusan:
+
+- Jika nilai `Cronbach Alpha > 0,60` maka instrumen dinyatakan **reliabel**
+- Jika nilai `Cronbach Alpha ≤ 0,60` maka instrumen dinyatakan **tidak reliabel**
+
+## Tabel Hasil Uji Reliabilitas
+
+| Metode | Nilai |
+|---|---|
+| Cronbach Alpha | 0.9376 |
+
+## Interpretasi Uji Reliabilitas
+
+Hasil pengujian reliabilitas menunjukkan nilai `Cronbach Alpha` sebesar **0,9376**. Nilai tersebut lebih besar dari 0,60 sehingga instrumen penelitian dinyatakan reliabel.
+
+Nilai reliabilitas yang sangat tinggi menunjukkan bahwa seluruh item pertanyaan memiliki tingkat konsistensi yang baik dalam mengukur kepuasan mahasiswa terhadap fasilitas WiFi dan internet di FMIPA Universitas Mataram. Instrumen penelitian dapat digunakan untuk proses analisis lebih lanjut karena mampu memberikan hasil pengukuran yang stabil dan konsisten.
+```
 
 # Naive Estimation
 
