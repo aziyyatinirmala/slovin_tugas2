@@ -46,7 +46,7 @@ Karakteristik data:
 - Jenis data: Data primer
 - Skala pengukuran: Skala Likert 1–5
 - Jumlah populasi: 52 mahasiswa
-- Jumlah sampel: 31 mahasiswa
+- Jumlah sampel: 20 mahasiswa
 
 Keterangan skala Likert:
 | Skor | Keterangan |
@@ -77,7 +77,6 @@ Penelitian menggunakan 9 indikator penilaian, yaitu:
 
 ---
 
-```markdown
 # Uji Validitas dan Reliabilitas
 
 ## Uji Validitas
@@ -131,7 +130,8 @@ Kriteria pengambilan keputusan:
 Hasil pengujian reliabilitas menunjukkan nilai `Cronbach Alpha` sebesar **0,9376**. Nilai tersebut lebih besar dari 0,60 sehingga instrumen penelitian dinyatakan reliabel.
 
 Nilai reliabilitas yang sangat tinggi menunjukkan bahwa seluruh item pertanyaan memiliki tingkat konsistensi yang baik dalam mengukur kepuasan mahasiswa terhadap fasilitas WiFi dan internet di FMIPA Universitas Mataram. Instrumen penelitian dapat digunakan untuk proses analisis lebih lanjut karena mampu memberikan hasil pengukuran yang stabil dan konsisten.
-```
+
+---
 
 # Naive Estimation
 
@@ -215,53 +215,144 @@ Nilai rata-rata keseluruhan weighted estimation sebesar 3,374 menunjukkan bahwa 
 
 ---
 
-# Perhitungan Sampel Menggunakan Rumus Slovin
+# Perhitungan Slovin
 
-Penentuan jumlah sampel dilakukan menggunakan rumus Slovin dengan tingkat error sebesar 17%.
+Penelitian ini menggunakan rumus Slovin untuk menentukan jumlah sampel minimum dari populasi mahasiswa Statistika FMIPA Universitas Mataram.
 
-Rumus Slovin:
+Rumus Slovin yang digunakan adalah:
 
 \[
 n = \frac{N}{1 + N(e)^2}
 \]
 
 Keterangan:
-- \(n\) = jumlah sampel
-- \(N\) = jumlah populasi
-- \(e\) = tingkat error
 
-## Substitusi Nilai
+- \( n \) = jumlah sampel
+- \( N \) = jumlah populasi
+- \( e \) = tingkat error
 
-\[
-n = \frac{52}{1 + 52(0.17)^2}
-\]
+---
 
-## Hasil Perhitungan
+# Hasil Perhitungan Slovin
 
-\[
-n = 20.78
-\]
+Diketahui:
 
-Dibulatkan menjadi:
+- Jumlah populasi (\(N\)) = 52 mahasiswa
+- Tingkat error (\(e\)) = 18% = 0,18
+
+Perhitungan:
 
 \[
-n = 21
+n = \frac{52}{1 + 52(0.18)^2}
 \]
 
-## Tabel Hasil Slovin
+\[
+n = \frac{52}{1 + 52(0.0324)}
+\]
+
+\[
+n = \frac{52}{2.6848}
+\]
+
+\[
+n = 19.37
+\]
+
+Hasil perhitungan dibulatkan menjadi:
+
+\[
+n = 19
+\]
+
+---
+
+# Tabel Hasil Slovin
 
 | Keterangan | Nilai |
 |---|---|
 | Populasi | 52 |
-| Tingkat Error | 17% |
-| Sampel Slovin | 20.78 |
-| Sampel Minimum | 21 |
+| Tingkat Error | 18% |
+| Sampel Slovin | 19.37 |
+| Sampel Minimum | 19 |
 | Sampel Penelitian | 20 |
 
-## Interpretasi Slovin
+---
 
-Hasil perhitungan menggunakan rumus Slovin dengan tingkat error sebesar 17% menghasilkan jumlah sampel minimum sebanyak 21 responden.
+# Interpretasi Slovin
 
-Penelitian ini menggunakan sebanyak 20 responden sehingga jumlah sampel penelitian masih berada sedikit di bawah jumlah sampel minimum berdasarkan perhitungan Slovin.
+Berdasarkan hasil perhitungan menggunakan rumus Slovin dengan tingkat error sebesar 18%, diperoleh jumlah sampel minimum sebanyak 19 responden.
 
-Perbedaan jumlah sampel yang hanya satu responden menunjukkan bahwa data penelitian masih dapat digunakan untuk menggambarkan tingkat kepuasan mahasiswa terhadap fasilitas WiFi dan internet di FMIPA Universitas Mataram, meskipun penambahan jumlah responden akan memberikan hasil yang lebih optimal.
+Penelitian ini menggunakan 20 responden sehingga jumlah sampel penelitian telah memenuhi syarat minimum berdasarkan rumus Slovin. Jumlah responden yang digunakan sudah cukup untuk mewakili populasi mahasiswa dalam penelitian survei kepuasan mahasiswa terhadap fasilitas WiFi dan internet di FMIPA Universitas Mataram.
+
+
+
+
+# Perbandingan Penggunaan Rumus Slovin pada Sampel 31 dan Sampel 20
+
+Penelitian survei kepuasan mahasiswa terhadap fasilitas WiFi dan internet di FMIPA Universitas Mataram menggunakan rumus Slovin untuk menentukan jumlah sampel minimum yang diperlukan dari populasi sebanyak 52 mahasiswa.
+
+Rumus Slovin yang digunakan adalah:
+
+\[
+n = \frac{N}{1 + N(e)^2}
+\]
+
+Keterangan:
+
+- \( n \) = jumlah sampel
+- \( N \) = jumlah populasi
+- \( e \) = tingkat error
+
+---
+
+# Perbandingan Hasil Slovin
+
+| Keterangan | Penelitian Awal | Penelitian Terbaru |
+|---|---|---|
+| Populasi | 52 | 52 |
+| Tingkat Error | 12% | 18% |
+| Sampel Minimum Slovin | 30 | 19 |
+| Sampel Penelitian | 31 | 20 |
+| Keputusan | Memenuhi Slovin | Memenuhi Slovin |
+
+---
+
+# Interpretasi Perbandingan
+
+## 1. Penelitian Awal (Sampel 31)
+
+Pada penelitian awal digunakan tingkat error sebesar **12%**. Berdasarkan rumus Slovin diperoleh jumlah sampel minimum sebesar **30 responden**.
+
+Penelitian menggunakan **31 responden**, sehingga jumlah sampel penelitian telah memenuhi bahkan melebihi jumlah minimum yang disyaratkan oleh rumus Slovin.
+
+Jumlah sampel yang lebih besar membuat hasil penelitian memiliki tingkat ketelitian yang lebih baik dalam menggambarkan kepuasan mahasiswa terhadap fasilitas WiFi dan internet di FMIPA Universitas Mataram.
+
+---
+
+## 2. Penelitian Terbaru (Sampel 20)
+
+Pada penelitian terbaru digunakan tingkat error sebesar **18%**. Berdasarkan rumus Slovin diperoleh jumlah sampel minimum sebesar **19 responden**.
+
+Penelitian menggunakan **20 responden**, sehingga jumlah sampel penelitian telah memenuhi syarat minimum berdasarkan rumus Slovin.
+
+Jumlah sampel yang digunakan sudah cukup untuk mewakili populasi mahasiswa dalam penelitian survei kepuasan mahasiswa terhadap fasilitas WiFi dan internet di FMIPA Universitas Mataram.
+
+---
+
+# Perbedaan Utama Kedua Penelitian
+
+| Aspek | Sampel 31 | Sampel 20 |
+|---|---|---|
+| Tingkat ketelitian | Lebih tinggi | Lebih rendah |
+| Tingkat error | 12% | 18% |
+| Representasi populasi | Lebih baik | Cukup baik |
+| Jumlah responden | Lebih banyak | Lebih sedikit |
+| Kesesuaian dengan Slovin | Memenuhi | Memenuhi |
+
+---
+
+# Kesimpulan
+
+Kedua penelitian telah memenuhi jumlah minimum sampel berdasarkan rumus Slovin. Penelitian dengan 31 responden memiliki tingkat ketelitian yang lebih tinggi karena menggunakan tingkat error yang lebih kecil yaitu 12%.
+
+Penelitian dengan 20 responden juga telah memenuhi ketentuan Slovin pada tingkat error 18%, sehingga tetap dapat digunakan untuk menggambarkan kepuasan mahasiswa terhadap fasilitas WiFi dan internet di FMIPA Universitas Mataram, meskipun tingkat ketelitiannya lebih rendah dibandingkan penelitian dengan 31 responden.
